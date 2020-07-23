@@ -7,8 +7,61 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>HYGROGEN ENERGY QUIZ</title>
 	<link rel="shortcut icon" href="img/22.jpg" type="image/jpg">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
 	<link href="css/templatemo-style.css" rel="stylesheet" />
+	<style>
+		.tm-welcome-section{
+			
+			padding-bottom: 0%;
+			margin-bottom: 0%;
+			padding: 0%;
+		}
+		.tm-section-title{
+			padding-bottom: 0%;
+			margin-bottom: 0%;
+		}
+		.tm-footer{
+			padding-top: 0.5%;
+			margin-top: 0%	;
+		}
+		.timer{
+			text-align: center;
+			font-size: xx-large;
+			margin: 0;
+			color: black;
+			border: none;
+			font-weight: bold;
+			padding: 0%;
+			cursor: default;
+			padding-bottom: 0%;
+			margin-bottom: 0%;
+		}
+		.time{
+			text-align: center;
+			padding-bottom: 0%;
+			margin-bottom: 0%;
+			
+			
+		}
+	</style>
+	<script>
+		$().ready(function(){
+
+$('div.alert').delay(420000);
+$('div.alert').hide(1000);
+});
+ </script>
+ <script>
+	 $(function() {
+  $(".but").on("click",function(e) {
+    e.preventDefault();
+    $(".content").hide();
+    $("#"+this.id+"div").show();
+  });
+});
+ </script>
+
 </head>
 <!--
 
@@ -37,7 +90,7 @@ https://templatemo.com/tm-539-simple-house
 							<ul class="tm-nav-ul">
 								<li class="tm-nav-li"><a href="index.html" class="tm-nav-link active">Home</a></li>
 								<li class="tm-nav-li"><a href="about.html" class="tm-nav-link">About</a></li>
-								<li class="tm-nav-li"><a href="contact.html" class="tm-nav-link">Quiz</a></li>
+								<li class="tm-nav-li"><a href="contact1.html" class="tm-nav-link">Quiz</a></li>
 							</ul>
 						</nav>	
 					</div>
@@ -47,11 +100,99 @@ https://templatemo.com/tm-539-simple-house
 
 		<main>
 			<header class="row tm-welcome-section">
-				<h2 class="col-12 text-center tm-section-title">QUIZ</h2>
-				<p class="col-12 text-center">We sent the answers through MAIL immediately after submission of the quiz the quiz is just for fun have fun.</p>
-			</header><div class="quiz1" >
-				<div class="involveme_embed" data-embed="team-2/hydrogen-energy"></div>
-<script src="https://app.involve.me/embed"></script>			</div>
+				<h2 class="col-12 text-center tm-section-title">NOTE</h2>
+				<p class="col-12 text-center">THE TEST WILL BE END WITHIN 7 MINS PLS SUBMIT IT BEFORE IT OTHERWISE,IT WILL CLOSE AUTOMATICALLY<BR>HAVE FUN GUYSS</p>
+	
+				<script> 
+					//set minutes 
+					var mins = 7; 
+			  
+					//calculate the seconds 
+					var secs = mins * 60; 
+			  
+					//countdown function is evoked when page is loaded 
+					function countdown() { 
+						setTimeout('Decrement()', 60); 
+					} 
+			  
+					//Decrement function decrement the value. 
+					function Decrement() { 
+						if (document.getElementById) { 
+							minutes = document.getElementById("minutes"); 
+							seconds = document.getElementById("seconds"); 
+			  
+							//if less than a minute remaining 
+							//Display only seconds value. 
+							if (seconds < 59) { 
+								seconds.value = secs; 
+							} 
+			  
+							//Display both minutes and seconds 
+							//getminutes and getseconds is used to 
+							//get minutes and seconds 
+							else { 
+								minutes.value = getminutes(); 
+								seconds.value = getseconds(); 
+							} 
+							//when less than a minute remaining 
+							//colour of the minutes and seconds 
+							//changes to red 
+							if (mins < 1) { 
+								minutes.style.color = "red"; 
+								seconds.style.color = "red"; 
+							} 
+							//if seconds becomes zero, 
+							//then page alert time up 
+							if (mins < 0) { 
+								alert('time up'); 
+								minutes.value = 0; 
+								seconds.value = 0; 
+
+							} 
+							//if seconds > 0 then seconds is decremented 
+							else { 
+								secs--; 
+								setTimeout('Decrement()', 1000); 
+			
+							} 
+						} 
+					} 
+			  
+					function getminutes() { 
+						//minutes is seconds divided by 60, rounded down 
+						mins = Math.floor(secs / 60); 
+						return mins; 
+					} 
+			  
+					function getseconds() { 
+						//take minutes remaining (as seconds) away  
+						//from total seconds remaining 
+						return secs - Math.round(mins * 60); 
+					} 
+				</script> 
+			</head> 
+			<!-- onload function is evoke when page is load --> 
+			<!--countdown function is called when page is loaded --> 
+			  
+			<body onload="countdown();" style="text-align: center;" class="timer1"> 
+				<div class="row tm-welcome-section"> 
+					<p class="col-12 text-center tm-section-title timer" ;style="color:black">TIME LEFT</p>
+					<div class="col-12 text-center tm-section-title">
+					<input id="minutes" type="text"
+					style="width: 25px; 
+									border: none; font-size: 32px; 
+									font-weight: bold; color: black;cursor: default;">
+									<font size="6" style="cursor: default;"> : 
+									</font> 
+					<input id="seconds" type="text" style="width: 38px; 
+									border: none; font-size: 30px; 
+									font-weight: bold; color: black;cursor: default;"></div></div>
+				</body> 
+			</header>
+			<div class="involveme_embed" data-embed="team-2/hydrogen-energy"></div>
+<script src="https://app.involve.me/embed"></script></p></div>
+				
+			</div>
 		</main>
 
 		<footer class="tm-footer text-center">
